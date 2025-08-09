@@ -1,7 +1,9 @@
 # 🚀 Pipelined MIPS Processor RTL Implementation
 
 <img width="1318" height="652" alt="image" src="https://github.com/user-attachments/assets/136109f4-f886-4da9-935d-b9740c2f5e9d" />
-This single-cycle MIPS processor follows the architecture in Design, 5th Edition by Patterson and Hennessy, but supports more instructions than the textbook’s basic diagrams
+This single-cycle MIPS processor follows the architecture in Design, 5th Edition by Patterson and Hennessy, but supports more instructions than the textbook’s basic diagrams.
+
+---
 
 ## 📋 Overview
 
@@ -50,9 +52,7 @@ The included testbench runs a 25-instruction MIPS program to verify functionalit
 
 ---
 
-Initial release with a 25-instruction test program and 40-cycle simulation testbench.
 
----
 
 Thank you for checking out this MIPS processor RTL implementation! 🛠️  
 Happy Verilog coding! 💻
