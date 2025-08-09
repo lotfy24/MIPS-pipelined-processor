@@ -1,9 +1,9 @@
 module Hazard_Unit (Branch_D,Rs_D,Rt_D,Rs_E,Rt_E,Write_Reg_E,
                     Mem_To_Reg_E,Reg_Write_E,Mem_To_Reg_M,Reg_Write_M,Write_Reg_M,Reg_Write_W,Write_Reg_W,
-                    Stall_F,Stall_D,Forward_AD,Forward_BD,Flush_E,Forward_AE,Forward_BE);
+                    Stall_F,Stall_D,Forward_AD,Forward_BD,Flush_E,Forward_AE,Forward_BE,Branch_Not_Equal_D);
 
 input [4:0] Rs_D,Rt_D,Rs_E,Rt_E,Write_Reg_E,Write_Reg_M,Write_Reg_W;
-input Branch_D,Mem_To_Reg_E,Reg_Write_E,Mem_To_Reg_M,Reg_Write_M,Reg_Write_W;
+input Branch_D,Mem_To_Reg_E,Reg_Write_E,Mem_To_Reg_M,Reg_Write_M,Reg_Write_W,Branch_Not_Equal_D;
 
 output reg  [1:0] Forward_AE,Forward_BE;
 output reg  Stall_F,Stall_D,Flush_E;
@@ -39,7 +39,7 @@ end
 
 assign LW_Stall = (Mem_To_Reg_E && ((Rt_E == Rs_D) || (Rt_E == Rt_D)));
 
-assign Branch_Stall = ((Branch_D) &&
+assign Branch_Stall = ((Branch_D || Branch_Not_Equal_D) &&
                       ((((Write_Reg_E == Rs_D) || (Write_Reg_E == Rt_D)) && Reg_Write_E) ||
                        (((Write_Reg_M == Rs_D) || (Write_Reg_M == Rt_D)) && Reg_Write_M)));
 
