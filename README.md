@@ -1,5 +1,7 @@
 # 🚀 Pipelined MIPS Processor RTL Implementation
 
+<img width="1318" height="652" alt="image" src="https://github.com/user-attachments/assets/136109f4-f886-4da9-935d-b9740c2f5e9d" />
+
 ## 📋 Overview
 
 This repository contains a Register-Transfer Level (RTL) implementation of a **pipelined MIPS processor** designed in Verilog.  
@@ -22,28 +24,28 @@ The included testbench runs a 25-instruction MIPS program to verify functionalit
 
 ## 📝 Supported MIPS Instructions and Opcodes
 
-| Instruction | Opcode (6-bit) | Type   | Description                   |
-|-------------|----------------|--------|-------------------------------|
-| add         | 000000         | R-type | Add                          |
-| sub         | 000000         | R-type | Subtract                     |
-| and         | 000000         | R-type | Bitwise AND                  |
-| or          | 000000         | R-type | Bitwise OR                   |
-| nor         | 000000         | R-type | Bitwise NOR                  |
-| xor         | 000000         | R-type | Bitwise XOR                  |
-| sll         | 000000         | R-type | Shift Left Logical           |
-| srl         | 000000         | R-type | Shift Right Logical          |
-| sra         | 000000         | R-type | Shift Right Arithmetic       |
-| slt         | 000000         | R-type | Set on Less Than             |
-| lw          | 100011         | I-type | Load Word                   |
-| sw          | 101011         | I-type | Store Word                  |
-| beq         | 000100         | I-type | Branch if Equal             |
-| bne         | 000101         | I-type | Branch if Not Equal         |
-| addi        | 001000         | I-type | Add Immediate               |
-| andi        | 001100         | I-type | AND Immediate               |
-| ori         | 001101         | I-type | OR Immediate                |
-| slti        | 001010         | I-type | Set Less Than Immediate     |
-| lui         | 001111         | I-type | Load Upper Immediate        |
-| xori        | 001110         | I-type | XOR Immediate               |
+| Instruction | Opcode (6-bit) | Type   |
+|-------------|----------------|--------|
+| add         | 000000         | R-type |
+| sub         | 000000         | R-type |
+| and         | 000000         | R-type |
+| or          | 000000         | R-type |
+| nor         | 000000         | R-type |
+| xor         | 000000         | R-type |
+| sll         | 000000         | R-type |
+| srl         | 000000         | R-type |
+| sra         | 000000         | R-type |
+| slt         | 000000         | R-type |
+| lw          | 100011         | I-type |
+| sw          | 101011         | I-type |
+| beq         | 000100         | I-type |
+| bne         | 000101         | I-type |
+| addi        | 001000         | I-type |
+| andi        | 001100         | I-type |
+| ori         | 001101         | I-type |
+| slti        | 001010         | I-type |
+| lui         | 001111         | I-type |
+| xori        | 001110         | I-type |
 
 ---
 
